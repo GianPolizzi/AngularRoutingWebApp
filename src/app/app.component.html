@@ -1,0 +1,114 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <a class="navbar-brand"><img alt="LOGO" src="../assets/images/loghi/logoAngular.png" height="50" width="auto"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <!-- Per collegare le voci alle pagine (componenti html): [routerLink] = "['/pagina']" -->
+        <a class="nav-link" [routerLink] = "['/home']" (click)="closeAllSubmenu()">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink] = "['/chisiamo']" (click)="closeAllSubmenu()">Chi siamo</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a (click)="toggleCategory()" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categorie
+        </a>
+        <div *ngIf="show" class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink] = "['/categorie/categoria1']">Utenti</a>
+          <a class="dropdown-item" [routerLink] = "['/categorie/categoria2']">Album</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" (click)="closeAllSubmenu()">Area riservata</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input (click)="closeAllSubmenu()" class="form-control mr-sm-2" type="search" placeholder="Utente, album..." aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Cerca</button>
+    </form>
+  </div>
+</nav>
+<!-- /Navbar -->
+
+<!-- Questo tag deve trovarsi nella pagina HTML in cui avviene il routing -->
+<router-outlet></router-outlet>
+
+<!-- Footer -->
+<footer (click)="closeAllSubmenu()" class="bg-light text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container-fluid p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">L'idea del progetto</h5>
+
+        <p>
+          Il progetto Angular Routing App ha il solo scopo dimostrativo di creare una Web App a strati,
+          partendo dai concetti semplici fino ad arrivare agli argomenti più complessi. Un'idea utile per
+          racchiudere e riassumere in un unica Single Page App tutto ciò che riguarda gli argomenti base
+          di Angular e Typescript.
+        </p>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Menu</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a [routerLink] = "['/home']" class="text-dark">Home</a>
+          </li>
+          <li>
+            <a [routerLink] = "['/chisiamo']" class="text-dark">Chi Siamo</a>
+          </li>
+          <li>
+            <a [routerLink] = "['/categorie/categoria1']" class="text-dark">Utenti</a>
+          </li>
+          <li>
+            <a [routerLink] = "['/categorie/categoria2']" class="text-dark">Album</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Informazioni</h5>
+
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Servizi</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">FAQ</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Contatti</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="copyright text-light text-center p-3">
+    © 2020 - 2022 Angular Routing Project | All rigth are reserved to
+    <a class="link-footer text-light" href="https://github.com/GianPolizzi/GianPolizzi" target="_blank">Gianmarco Polizzi</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+<!-- /Footer -->

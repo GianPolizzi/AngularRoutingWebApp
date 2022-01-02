@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <div class="row text-center">
+        <div class="col">
+            <h1>Utenti</h1>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Email</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let user of utenti">
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

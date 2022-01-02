@@ -1,0 +1,16 @@
+.title1 {
+    position: absolute;
+    margin-top: 5%;
+    text-align: center;
+    margin-left: 11%;
+    color: white;
+}
+
+.card-img, .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card {
+    border-radius: 15px !important;
+}

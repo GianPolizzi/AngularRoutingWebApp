@@ -1,0 +1,22 @@
+.dropdown-menu {
+    display: inline !important;
+}
+
+.navbar {
+    background-color: #0e005d !important;
+    font-size: larger;
+}
+
+footer {
+    background-color: rgb(158, 158, 158) !important;
+    margin-top: 30.4%;
+}
+
+.link-footer {
+    color: rgb(187, 187, 187) !important;
+}
+
+.copyright {
+    background-color: #0e005d !important;
+    /*background-color: #343a40*/
+}
